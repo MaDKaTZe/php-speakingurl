@@ -1,0 +1,19 @@
+{
+    "name": "madkatze/php-speakingurl",
+    "description": "Port of speakingurl JavaScript library for PHP.",
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Todor Petrov",
+            "email": "tpetrov92@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "SpeakingUrl\\": "src/SpeakingUrl"
+        }
+    }
+}
