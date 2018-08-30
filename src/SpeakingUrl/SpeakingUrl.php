@@ -1417,6 +1417,14 @@ class SpeakingUrl
         'custom'       => []
     ];
 
+    /**
+     * Makes a pretty looking URL. For more information about supported options,
+     * please refer to <a href="https://pid.github.io/speakingurl/">SpeakingURL documentation</a>
+     *
+     * @param string $input
+     * @param array $options
+     * @return string
+     */
     static public function getSlug(string $input, array $options = []): string
     {
         if (mb_strlen($input) === 0) {
@@ -1639,6 +1647,12 @@ class SpeakingUrl
         return false;
     }
 
+    /**
+     * Parse input options.
+     *
+     * @param array $options
+     * @return array
+     */
     static private function parseOptions(array $options): array
     {
         $parsed = [
@@ -1686,6 +1700,12 @@ class SpeakingUrl
         return false;
     }
 
+    /**
+     * Escape special characters.
+     *
+     * @param string $input
+     * @return string
+     */
     static private function escapeChars(string $input)
     {
         return preg_replace('/[-\\^$*+?.()|[\]{}\/]/', '\\$&', $input);
